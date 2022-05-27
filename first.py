@@ -18,12 +18,12 @@ def check_failed_attempts(df):
     return df_failed
 
 def check_multiple_failed_attempt(df):
-    # checking if the is_successful_payment is 0 and failed_attempts is equal to or more than 2
-    df_multiple_attempt_failed = df[(df['is_successful_payment'] == 0) & (df['failed_attempts'] >= 2)]
+    # checking if the is_successful_payment is 0 and failed_attempts is equal to or more than 1
+    df_multiple_attempt_failed = df[(df['is_successful_payment'] == 0) & (df['failed_attempts'] >= 1)]
     return df_multiple_attempt_failed
 
 def check_multiple_attempt_succeeded(df):
-    # checking if the is_successful_payment is 0 and failed_attempts is equal to or more than 2
+    # checking if the is_successful_payment is 1 and failed_attempts is equal to or more than 2
     df_multiple_attempt_succeeded = df[(df['is_successful_payment'] == 1) & (df['failed_attempts'] >= 2)]
     return df_multiple_attempt_succeeded
 
