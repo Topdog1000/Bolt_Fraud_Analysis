@@ -30,7 +30,7 @@ def check_multiple_attempt_succeeded(df):
 
 
 def main():
-    df = open_csv('bolt.csv')
+    df = open_csv('1st_adyen_rides-success-and-fail.csv')
     df_failed = check_failed_attempts(df)
     print("Number of failed attempts on first trial: ", len(df_failed))
     print(df_failed)
